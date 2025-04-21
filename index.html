@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Frutas y Verduras</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/load-shared.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <ul>
+                <li><a href="frutas/tropicales.html">Tropicales</a></li>
+                <li><a href="frutas/citricas.html">Cítricas</a></li>
+                <li><a href="verduras/hortalizas.html">Hortalizas</a></li>
+                <li><a href="verduras/tuberculos.html">Tubérculos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>Bienvenidos a la Tienda de Frutas y Verduras</h1>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/mango.jpg" alt="Mango">
+                <h3>Mango</h3>
+                <p>Dulce, jugoso y refrescante.</p>
+                <button onclick="agregarAlCarrito('Mango')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/papaya.jpg" alt="Papaya">
+                <h3>Papaya</h3>
+                <p>Suave, tropical y rica en vitaminas.</p>
+                <button onclick="agregarAlCarrito('Papaya')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/piña.jpg" alt="Piña">
+                <h3>Piña</h3>
+                <p>Ácida y sabrosa, ideal para jugos.</p>
+                <button onclick="agregarAlCarrito('Piña')">Agregar al carrito</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tienda de Frutas y Verduras</p>
+    </footer>
+</body>
+</html>
