@@ -1,0 +1,1 @@
+// Script de carga del header y footer
