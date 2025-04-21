@@ -1,0 +1,1 @@
+// JS para cargar header/footer
