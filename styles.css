@@ -1,1 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+main {
+    padding: 2rem;
+}
+
+.producto {
+    margin-bottom: 2rem;
+}
+
+.producto img {
+    width: 150px;
+    height: auto;
+}
 /* Estilos comunes del proyecto */
