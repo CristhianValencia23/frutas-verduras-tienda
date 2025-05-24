@@ -1,1 +1,26 @@
-<!-- Contenido de index.html actualizado -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Frutas y Verduras</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts/load-shared.js" defer></script>
+  <script src="scripts/carrito.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <h1>Bienvenidos</h1>
+    <section class="productos">
+      <div class="producto">
+        <img src="img/mango.jpg" alt="Mango">
+        <h3>Mango</h3>
+        <p>Fruta tropical dulce y jugosa.</p>
+        <button onclick="agregarAlCarrito('Mango')">Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
