@@ -1,35 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Hortalizas</title>
-    <link rel="stylesheet" href="../styles.css">
-    <script src="../scripts/carrito.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hortalizas</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../scripts/load-shared.js" defer></script>
+  <script src="../scripts/carrito.js" defer></script>
 </head>
 <body>
-    <header><h1>Hortalizas</h1></header>
-    <main>
-        <div class="productos">
-            <div class="producto">
-                <img src="../img/lechuga.jpg" alt="Lechuga">
-                <h3>Lechuga</h3>
-                <p>Fresca y ligera, perfecta para ensaladas.</p>
-                <button onclick="agregarAlCarrito('Lechuga')">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="../img/tomate.jpg" alt="Tomate">
-                <h3>Tomate</h3>
-                <p>Jugoso y versátil, básico en la cocina.</p>
-                <button onclick="agregarAlCarrito('Tomate')">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="../img/pepino.jpg" alt="Pepino">
-                <h3>Pepino</h3>
-                <p>Refrescante, ideal para ensaladas.</p>
-                <button onclick="agregarAlCarrito('Pepino')">Agregar al carrito</button>
-            </div>
-        </div>
-    </main>
+  <div id="header"></div>
+  <main>
+    <h1>Hortalizas</h1>
+    <div class="productos">
+      <div class="producto">
+        <img src="../img/lechuga.jpg" alt="Lechuga">
+        <h2>Lechuga</h2>
+        <p>Verdura de hojas verdes usada en ensaladas y sandwiches.</p>
+        <input type="number" class="cantidad" value="1" min="1">
+        <select class="unidad">
+          <option value="kilos">Kilos</option>
+          <option value="libras">Libras</option>
+        </select>
+        <button onclick="agregarAlCarrito('Lechuga', '../img/lechuga.jpg', 'Verdura de hojas verdes usada en ensaladas y sandwiches.')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="../img/pepino.jpg" alt="Pepino">
+        <h2>Pepino</h2>
+        <p>Verdura crujiente usada en ensaladas y jugos.</p>
+        <input type="number" class="cantidad" value="1" min="1">
+        <select class="unidad">
+          <option value="kilos">Kilos</option>
+          <option value="libras">Libras</option>
+        </select>
+        <button onclick="agregarAlCarrito('Pepino', '../img/pepino.jpg', 'Verdura crujiente usada en ensaladas y jugos.')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="../img/tomate.jpg" alt="Tomate">
+        <h2>Tomate</h2>
+        <p>Ingrediente fundamental en salsas y ensaladas.</p>
+        <input type="number" class="cantidad" value="1" min="1">
+        <select class="unidad">
+          <option value="kilos">Kilos</option>
+          <option value="libras">Libras</option>
+        </select>
+        <button onclick="agregarAlCarrito('Tomate', '../img/tomate.jpg', 'Ingrediente fundamental en salsas y ensaladas.')">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+  <div id="footer"></div>
 </body>
 </html>
