@@ -1,56 +1,40 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Frutas y Verduras</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts/load-shared.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Frutas y Verduras</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/load-shared.js" defer></script>
+    <script src="scripts/carrito.js" defer></script>
 </head>
 <body>
-  <div id="header"></div>
+    <div id="header"></div>
 
-  <main class="home">
-    <h1>Bienvenidos a la Tienda de Frutas y Verduras</h1>
-    <div class="grid">
-      <div class="producto">
-        <img src="img/mango.jpg" alt="Mango">
-        <h3>Mango</h3>
-        <p>Fruta tropical dulce y jugosa.</p>
-        <input type="number" min="1" value="1" class="cantidad">
-        <select class="unidad">
-          <option value="kg">Kg</option>
-          <option value="lb">Lb</option>
-        </select>
-        <button onclick="agregarAlCarrito('Mango', 'img/mango.jpg', 'Fruta tropical dulce y jugosa.')">Agregar al carrito</button>
-      </div>
-      <div class="producto">
-        <img src="img/naranja.jpg" alt="Naranja">
-        <h3>Naranja</h3>
-        <p>Fruta cítrica rica en vitamina C.</p>
-        <input type="number" min="1" value="1" class="cantidad">
-        <select class="unidad">
-          <option value="kg">Kg</option>
-          <option value="lb">Lb</option>
-        </select>
-        <button onclick="agregarAlCarrito('Naranja', 'img/naranja.jpg', 'Fruta cítrica rica en vitamina C.')">Agregar al carrito</button>
-      </div>
-      <div class="producto">
-        <img src="img/papaya.jpg" alt="Papaya">
-        <h3>Papaya</h3>
-        <p>Fruta tropical ideal para la digestión.</p>
-        <input type="number" min="1" value="1" class="cantidad">
-        <select class="unidad">
-          <option value="kg">Kg</option>
-          <option value="lb">Lb</option>
-        </select>
-        <button onclick="agregarAlCarrito('Papaya', 'img/papaya.jpg', 'Fruta tropical ideal para la digestión.')">Agregar al carrito</button>
-      </div>
-    </div>
-  </main>
+    <main>
+        <h1>Bienvenidos a la Tienda de Frutas y Verduras</h1>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/mango.jpg" alt="Mango">
+                <h3>Mango</h3>
+                <p>Fruta tropical dulce y jugosa.</p>
+                <button onclick="agregarAlCarrito('Mango')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/papaya.jpg" alt="Papaya">
+                <h3>Papaya</h3>
+                <p>Fruta tropical rica en fibra y antioxidantes.</p>
+                <button onclick="agregarAlCarrito('Papaya')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/naranja.jpg" alt="Naranja">
+                <h3>Naranja</h3>
+                <p>Fruta cítrica ideal para jugos con alto contenido de vitamina C.</p>
+                <button onclick="agregarAlCarrito('Naranja')">Agregar al carrito</button>
+            </div>
+        </div>
+    </main>
 
-  <div id="footer"></div>
-  <script src="scripts/carrito.js"></script>
+    <div id="footer"></div>
 </body>
 </html>
