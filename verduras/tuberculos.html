@@ -6,48 +6,50 @@
   <title>Tubérculos</title>
   <link rel="stylesheet" href="../styles.css">
   <script src="../scripts/load-shared.js" defer></script>
-  <script src="../scripts/carrito.js" defer></script>
 </head>
 <body>
   <div id="header"></div>
+
   <main>
     <h1>Tubérculos</h1>
     <div class="productos">
       <div class="producto">
         <img src="../img/papa.jpg" alt="Papa">
         <h2>Papa</h2>
-        <p>Alimento básico en muchas culturas, ideal para freír, cocer o hornear.</p>
-        <input type="number" class="cantidad" value="1" min="1">
-        <select class="unidad">
-          <option value="kilos">Kilos</option>
-          <option value="libras">Libras</option>
-        </select>
-        <button onclick="agregarAlCarrito('Papa', '../img/papa.jpg', 'Alimento básico en muchas culturas, ideal para freír, cocer o hornear.')">Agregar al carrito</button>
+        <p>Básico en muchas cocinas, versátil y nutritiva.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Papa">Agregar al carrito</button>
       </div>
+
       <div class="producto">
         <img src="../img/yuca.jpg" alt="Yuca">
         <h2>Yuca</h2>
-        <p>Raíz rica en almidón, común en preparaciones tradicionales latinoamericanas.</p>
-        <input type="number" class="cantidad" value="1" min="1">
-        <select class="unidad">
-          <option value="kilos">Kilos</option>
-          <option value="libras">Libras</option>
-        </select>
-        <button onclick="agregarAlCarrito('Yuca', '../img/yuca.jpg', 'Raíz rica en almidón, común en preparaciones tradicionales latinoamericanas.')">Agregar al carrito</button>
+        <p>Rica fuente de carbohidratos, excelente para freír o hervir.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Yuca">Agregar al carrito</button>
       </div>
+
       <div class="producto">
         <img src="../img/camote.jpg" alt="Camote">
         <h2>Camote</h2>
-        <p>También conocido como batata, tiene un sabor dulce ideal para postres o guarniciones.</p>
-        <input type="number" class="cantidad" value="1" min="1">
-        <select class="unidad">
-          <option value="kilos">Kilos</option>
-          <option value="libras">Libras</option>
-        </select>
-        <button onclick="agregarAlCarrito('Camote', '../img/camote.jpg', 'También conocido como batata, tiene un sabor dulce ideal para postres o guarniciones.')">Agregar al carrito</button>
+        <p>Alternativa dulce a la papa, rica en betacarotenos.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Camote">Agregar al carrito</button>
       </div>
     </div>
+
+    <a class="volver-btn boton" href="#">Volver</a>
   </main>
+
   <div id="footer"></div>
 </body>
 </html>
