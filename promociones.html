@@ -1,1 +1,43 @@
-<!-- Contenido promociones -->
+<!-- promociones.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promociones</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts/load-shared.js" defer></script>
+  <script src="scripts/carrito.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <h1>Promociones Especiales</h1>
+    <div class="productos">
+      <div class="producto">
+        <img src="img/mango.jpg" alt="Combo Frutas Tropicales">
+        <h2>Combo Tropical</h2>
+        <p>Incluye Mango, Papaya y Piña. Ideal para jugos y ensaladas. ¡Aprovecha el descuento!</p>
+        <input type="number" class="cantidad" value="1" min="1">
+        <select class="unidad">
+          <option value="kilos">Kilos</option>
+          <option value="libras">Libras</option>
+        </select>
+        <button onclick="agregarAlCarrito('Combo Tropical', 'img/mango.jpg', 'Incluye Mango, Papaya y Piña. Ideal para jugos y ensaladas.')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/papa.jpg" alt="Combo Tubérculos">
+        <h2>Combo Tubérculos</h2>
+        <p>Combo de Papa, Yuca y Camote a precio especial. Ideal para guarniciones.</p>
+        <input type="number" class="cantidad" value="1" min="1">
+        <select class="unidad">
+          <option value="kilos">Kilos</option>
+          <option value="libras">Libras</option>
+        </select>
+        <button onclick="agregarAlCarrito('Combo Tubérculos', 'img/papa.jpg', 'Combo de Papa, Yuca y Camote a precio especial.')">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+  <div id="footer"></div>
+</body>
+</html>
