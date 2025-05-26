@@ -6,48 +6,50 @@
   <title>Frutas Tropicales</title>
   <link rel="stylesheet" href="../styles.css">
   <script src="../scripts/load-shared.js" defer></script>
-  <script src="../scripts/carrito.js" defer></script>
 </head>
 <body>
   <div id="header"></div>
+
   <main>
     <h1>Frutas Tropicales</h1>
     <div class="productos">
       <div class="producto">
         <img src="../img/mango.jpg" alt="Mango">
         <h2>Mango</h2>
-        <p>Fruta dulce y jugosa rica en vitaminas A y C.</p>
-        <input type="number" class="cantidad" value="1" min="1">
-        <select class="unidad">
-          <option value="kilos">Kilos</option>
-          <option value="libras">Libras</option>
-        </select>
-        <button onclick="agregarAlCarrito('Mango', '../img/mango.jpg', 'Fruta dulce y jugosa rica en vitaminas A y C.')">Agregar al carrito</button>
+        <p>Dulce fruta tropical ideal para jugos y postres.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Mango">Agregar al carrito</button>
       </div>
+
       <div class="producto">
         <img src="../img/papaya.jpg" alt="Papaya">
         <h2>Papaya</h2>
-        <p>Fruta tropical con enzimas digestivas y sabor dulce.</p>
-        <input type="number" class="cantidad" value="1" min="1">
-        <select class="unidad">
-          <option value="kilos">Kilos</option>
-          <option value="libras">Libras</option>
-        </select>
-        <button onclick="agregarAlCarrito('Papaya', '../img/papaya.jpg', 'Fruta tropical con enzimas digestivas y sabor dulce.')">Agregar al carrito</button>
+        <p>Rica en fibra, buena para la digestión.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Papaya">Agregar al carrito</button>
       </div>
+
       <div class="producto">
-        <img src="../img/piña.jpg" alt="Piña">
+        <img src="../img/pina.jpg" alt="Piña">
         <h2>Piña</h2>
-        <p>Fruta ácida tropical excelente para jugos y postres.</p>
-        <input type="number" class="cantidad" value="1" min="1">
-        <select class="unidad">
-          <option value="kilos">Kilos</option>
-          <option value="libras">Libras</option>
-        </select>
-        <button onclick="agregarAlCarrito('Piña', '../img/piña.jpg', 'Fruta ácida tropical excelente para jugos y postres.')">Agregar al carrito</button>
+        <p>Refrescante fruta tropical con alto contenido en vitamina C.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Piña">Agregar al carrito</button>
       </div>
     </div>
+
+    <a class="volver-btn boton" href="#">Volver</a>
   </main>
+
   <div id="footer"></div>
 </body>
 </html>
