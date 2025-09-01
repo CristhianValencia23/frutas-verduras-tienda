@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Frutas y Verduras</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts/load-shared.js" defer></script>
-    <script src="scripts/carrito.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Frutas y Verduras</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header"></div>
+  <header>
+    <h1>Tienda de Frutas y Verduras</h1>
+    <nav>
+      <a href="#frutas">Frutas</a>
+      <a href="#verduras">Verduras</a>
+      <a href="#carrito">Carrito</a>
+    </nav>
+  </header>
 
-    <main>
-        <h1>Bienvenidos a la Tienda de Frutas y Verduras</h1>
-        <div class="productos">
-            <div class="producto">
-                <img src="img/mango.jpg" alt="Mango">
-                <h3>Mango</h3>
-                <p>Fruta tropical dulce y jugosa.</p>
-                <button onclick="agregarAlCarrito('Mango')">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="img/papaya.jpg" alt="Papaya">
-                <h3>Papaya</h3>
-                <p>Fruta tropical rica en fibra y antioxidantes.</p>
-                <button onclick="agregarAlCarrito('Papaya')">Agregar al carrito</button>
-            </div>
-            <div class="producto">
-                <img src="img/naranja.jpg" alt="Naranja">
-                <h3>Naranja</h3>
-                <p>Fruta cítrica ideal para jugos con alto contenido de vitamina C.</p>
-                <button onclick="agregarAlCarrito('Naranja')">Agregar al carrito</button>
-            </div>
-        </div>
-    </main>
+  <main>
+    <section id="frutas">
+      <h2>Frutas</h2>
+      <div class="producto">
+        <p>Manzana</p>
+        <button onclick="agregarAlCarrito('Manzana')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <p>Banana</p>
+        <button onclick="agregarAlCarrito('Banana')">Agregar al carrito</button>
+      </div>
+    </section>
 
-    <div id="footer"></div>
+    <section id="verduras">
+      <h2>Verduras</h2>
+      <div class="producto">
+        <p>Tomate</p>
+        <button onclick="agregarAlCarrito('Tomate')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <p>Lechuga</p>
+        <button onclick="agregarAlCarrito('Lechuga')">Agregar al carrito</button>
+      </div>
+    </section>
+
+    <section id="carrito">
+      <h2>Carrito</h2>
+      <ul id="lista-carrito"></ul>
+      <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tienda de Frutas y Verduras</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
