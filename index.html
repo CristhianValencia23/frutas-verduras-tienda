@@ -1,58 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Frutas y Verduras</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Frutas y Verduras - Inicio</title>
+  <!-- Usar el CSS que ya tienes en tu repo -->
+  <link rel="stylesheet" href="/frutas-verduras-tienda/styles.css">
 </head>
-  <script src="script.js"></script>
 <body>
-  <header>
-    <h1>Tienda de Frutas y Verduras</h1>
-    <nav>
-      <a href="#frutas">Frutas</a>
-      <a href="#verduras">Verduras</a>
-      <a href="#carrito">Carrito</a>
-    </nav>
-  </header>
+  <!-- header se inyectará aquí -->
+  <div id="header"></div>
 
-  <main>
-    <section id="frutas">
-      <h2>Frutas</h2>
-      <div class="producto">
-        <p>Manzana</p>
-        <button onclick="agregarAlCarrito('Manzana')">Agregar al carrito</button>
-      </div>
-      <div class="producto">
-        <p>Banana</p>
-        <button onclick="agregarAlCarrito('Banana')">Agregar al carrito</button>
-      </div>
-    </section>
+  <main class="container">
+    <h1>Frutas y Verduras</h1>
 
-    <section id="verduras">
-      <h2>Verduras</h2>
-      <div class="producto">
-        <p>Tomate</p>
-        <button onclick="agregarAlCarrito('Tomate')">Agregar al carrito</button>
-      </div>
-      <div class="producto">
-        <p>Lechuga</p>
-        <button onclick="agregarAlCarrito('Lechuga')">Agregar al carrito</button>
-      </div>
-    </section>
+    <section class="productos-grid">
+      <article class="card">
+        <img src="/frutas-verduras-tienda/img/mango.jpg" alt="Mango">
+        <h3>Mango</h3>
+        <p>Fruta tropical dulce y jugosa.</p>
+        <button class="add-to-cart" data-add-to-cart data-id="mango" data-name="Mango" data-price="2.50">
+          Agregar al carrito
+        </button>
+      </article>
 
-    <section id="carrito">
-      <h2>Carrito</h2>
-      <ul id="lista-carrito"></ul>
-      <button onclick="vaciarCarrito()">Vaciar carrito</button>
+      <article class="card">
+        <img src="/frutas-verduras-tienda/img/papaya.jpg" alt="Papaya">
+        <h3>Papaya</h3>
+        <p>Fruta tropical, rica en vitaminas.</p>
+        <button class="add-to-cart" data-add-to-cart data-id="papaya" data-name="Papaya" data-price="3.00">
+          Agregar al carrito
+        </button>
+      </article>
+
+      <article class="card">
+        <img src="/frutas-verduras-tienda/img/naranja.jpg" alt="Naranja">
+        <h3>Naranja</h3>
+        <p>Cítrico fresco y jugoso.</p>
+        <button class="add-to-cart" data-add-to-cart data-id="naranja" data-name="Naranja" data-price="1.25">
+          Agregar al carrito
+        </button>
+      </article>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Tienda de Frutas y Verduras</p>
-  </footer>
+  <!-- footer se inyectará aquí -->
+  <div id="footer"></div>
 
-  <script src="script.js"></script>
+  <!-- Cargar el loader que inyecta header/footer y luego carga carrito.js -->
+  <script src="/frutas-verduras-tienda/scripts/load-shared.js"></script>
 </body>
 </html>
