@@ -1,41 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito de Compras</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carrito - Frutas y Verduras</title>
+  <link rel="stylesheet" href="/frutas-verduras-tienda/styles.css">
 </head>
 <body>
-  <!-- Encabezado -->
-  <header>
-    <h1>Carrito de Compras</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="frutas.html">Frutas</a></li>
-        <li><a href="verduras.html">Verduras</a></li>
-        <li><a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header"></div>
 
-  <!-- Contenido -->
-  <main>
-    <section>
-      <h2>Productos en tu carrito</h2>
-      <ul id="cart-items"></ul>
-      <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
-      <button id="clear-cart">Vaciar carrito</button>
-    </section>
+  <main class="container">
+    <h1>Carrito de Compras</h1>
+
+    <table class="cart-table">
+      <thead>
+        <tr><th>Producto</th><th>Cantidad</th><th>Precio</th><th>Subtotal</th><th></th></tr>
+      </thead>
+      <tbody id="cart-table-body"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align:right">Total:</td>
+          <td id="cart-total">$0.00</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button id="clear-cart">Vaciar carrito</button>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Frutas y Verduras Tienda</p>
-  </footer>
+  <div id="footer"></div>
 
-  <!-- Script del carrito -->
-  <script src="script.js"></script>
+  <script src="/frutas-verduras-tienda/scripts/load-shared.js"></script>
+  <script>
+    // El load-shared.js carga carrito.js y luego llama a Cart.renderCartIfPresent()
+    // Aquí añadimos la acción del botón "Vaciar carrito"
+    (function waitCart(){
+      if (window.Cart) {
+        document.getElementById('clear-cart').addEventListener('click', function(){
+          localStorage.removeItem('fv-cart');
+          Cart.updateBadge();
+          Cart.renderCartIfPresent();
+        });
+      } else {
+        setTimeout(waitCart, 100);
+      }
+    })();
+  </script>
 </body>
 </html>
