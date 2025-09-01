@@ -4,20 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito de Compras</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts/load-shared.js" defer></script>
-  <script src="scripts/carrito.js" defer></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-  <script src="script.js"></script>
 <body>
-  <div id="header"></div>
-  <main>
+  <!-- Encabezado -->
+  <header>
     <h1>Carrito de Compras</h1>
-    <div id="carrito-contenido"></div>
-    <div id="carrito-total"></div>
-    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="frutas.html">Frutas</a></li>
+        <li><a href="verduras.html">Verduras</a></li>
+        <li><a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido -->
+  <main>
+    <section>
+      <h2>Productos en tu carrito</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+      <button id="clear-cart">Vaciar carrito</button>
+    </section>
   </main>
-  <div id="footer"></div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Frutas y Verduras Tienda</p>
+  </footer>
+
+  <!-- Script del carrito -->
+  <script src="script.js"></script>
 </body>
 </html>
-
