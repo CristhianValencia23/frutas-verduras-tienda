@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frutas Cítricas</title>
+  <link rel="stylesheet" href="../styles.css">
+  
+  
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <h1>Frutas Cítricas</h1>
+    <div class="productos">
+      <div class="producto">
+        <img src="../img/limon.jpg" alt="Limón">
+        <h2>Limón</h2>
+        <p>Fruta cítrica ácida usada en bebidas y cocina.</p>
+        <input type="number" class="cantidad" value="1" min="1">
+        <select class="unidad">
+          <option value="kilos">Kilos</option>
+          <option value="libras">Libras</option>
+        </select>
+        <button onclick="agregarAlCarrito('Limón', '../img/limon.jpg', 'Fruta cítrica ácida usada en bebidas y cocina.')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="../img/mandarina.jpg" alt="Mandarina">
+        <h2>Mandarina</h2>
+        <p>Fruta cítrica dulce y fácil de pelar, ideal como snack.</p>
+        <input type="number" class="cantidad" value="1" min="1">
+        <select class="unidad">
+          <option value="kilos">Kilos</option>
+          <option value="libras">Libras</option>
+        </select>
+        <button onclick="agregarAlCarrito('Mandarina', '../img/mandarina.jpg', 'Fruta cítrica dulce y fácil de pelar, ideal como snack.')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="../img/naranja.jpg" alt="Naranja">
+        <h2>Naranja</h2>
+        <p>Fruta rica en vitamina C perfecta para jugo.</p>
+        <input type="number" class="cantidad" value="1" min="1">
+        <select class="unidad">
+          <option value="kilos">Kilos</option>
+          <option value="libras">Libras</option>
+        </select>
+        <button onclick="agregarAlCarrito('Naranja', '../img/naranja.jpg', 'Fruta rica en vitamina C perfecta para jugo.')">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="../scripts/load-shared.js"></script>
+</body>
+</html>
+

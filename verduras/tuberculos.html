@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tubérculos</title>
+  <link rel="stylesheet" href="../styles.css">
+  
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <h1>Tubérculos</h1>
+    <div class="productos">
+      <div class="producto">
+        <img src="../img/papa.jpg" alt="Papa">
+        <h2>Papa</h2>
+        <p>Básico en muchas cocinas, versátil y nutritiva.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Papa">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <img src="../img/yuca.jpg" alt="Yuca">
+        <h2>Yuca</h2>
+        <p>Rica fuente de carbohidratos, excelente para freír o hervir.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Yuca">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <img src="../img/camote.jpg" alt="Camote">
+        <h2>Camote</h2>
+        <p>Alternativa dulce a la papa, rica en betacarotenos.</p>
+        <label>Peso:
+          <input type="number" min="0.5" step="0.5" value="1">
+          <select><option value="kg">Kg</option><option value="lb">Lb</option></select>
+        </label>
+        <button class="agregar-carrito" data-nombre="Camote">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <a class="volver-btn boton" href="#">Volver</a>
+  </main>
+
+  <div id="footer"></div>
+  <script src="../scripts/load-shared.js"></script>
+</body>
+</html>
